@@ -1,0 +1,538 @@
+/* optimisation part*/
+:root {
+  --main-green: rgb(20, 219, 20);
+  --hover-green: rgb(13 172 13);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+._word-breacker {
+  overflow-wrap: break-word;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+/* Header style*/
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999999;
+  background-color: #fff;
+}
+.img-fluid {
+  max-width: 83%;
+  height: auto;
+}
+.nav-item a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 15px;
+  transition: all 0.4s;
+  font-family: "Montserrat", sans-serif;
+}
+.nav-item a:hover {
+  color: var(--main-green);
+}
+.navbar-brand {
+  height: 50px;
+  width: 100px;
+}
+.search {
+  height: 45px;
+  outline: none;
+  border: 2px solid var(--main-green);
+  background-color: transparent;
+  border-radius: 20px 0px 0px 20px;
+  border-right: none;
+}
+/*.search:focus{
+  outline: none;
+  box-shadow: none;
+  border: 2px solid var(--main-green);
+  border-right: none;
+}*/
+.search-btn {
+  outline: none;
+  border: none;
+  height: 45px;
+  background-color: var(--main-green);
+  color: #fff;
+  border-radius: 0px 20px 20px 0px;
+  transition: all 0.4s;
+}
+.search-btn:hover {
+  background-color: var(--hover-green);
+}
+.bi-bag-plus {
+  font-size: 40px;
+  color: #000;
+  cursor: pointer;
+  padding-top: 5px;
+  transition: all 0.4s;
+}
+.bi-bag-plus:hover {
+  color: var(--main-green);
+}
+.navbar-toggler {
+  font-size: 25px;
+  color: #000;
+  /*border: none;*/
+}
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+  color: var(--main-green);
+}
+/* أيقونة السلة جنب اللوجو في الموبايل */
+.navbar .bi-bag-plus {
+  font-size: 1.4rem; /* حجم الأيقونة */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar .bi-bag-plus:hover {
+  color: #28a745; /* أخضر عند الهوفر */
+}
+
+/* مسافات أفضل في الموبايل */
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    margin-right: 0.5rem;
+  }
+  .navbar .bi-bag-plus {
+    margin-right: auto; /* تخليها تلزق شمال شوية */
+  }
+}
+#offcanvasCart .checkOut{
+  background-color: var(--main-green);
+}
+#offcanvasCart .checkOut:hover{
+  background-color: var(--hover-green);
+}
+/* Main Style*/
+main {
+  background: url("../images/main_background.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+main h1 {
+  font-size: 4.5rem;
+  font-family: "Righteous", cursive;
+}
+/*=============
+main .row .dis-part{
+  overflow-wrap: break-word;
+}
+=============*/
+main .main-par1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+main .main-par2 {
+  font-size: 18px;
+  color: grey;
+}
+.main-btn1 {
+  height: 50px;
+  width: 25%;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: var(--main-green);
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.main-btn1:hover {
+  background-color: var(--hover-green);
+}
+.main-btn2 {
+  height: 50px;
+  width: 25%;
+  outline: none;
+  background-color: transparent;
+  color: var(--main-green);
+  border: 1px solid var(--main-green);
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+.main-btn2:hover {
+  color: #fff;
+  border: none;
+  background-color: var(--main-green);
+}
+.line {
+  height: 6px;
+  width: 30%;
+  background: var(--main-green);
+  display: inline-block;
+}
+/* About style*/
+.about {
+  background: url("../images/top-view-cherries-bowl-pattern-apricots-cherries-pear-green-background-with-copy-space.jpg")
+    no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+.about h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.about .about-par1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.about .about-par2 {
+  font-size: 18px;
+  color: #fff;
+}
+/*Welcome section style*/
+.welcome {
+  background: var(--main-green);
+}
+.welcome .line {
+  background: #fff;
+}
+.welcome h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.welcome .card {
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.welcome i {
+  font-size: 45px;
+  color: var(--main-green);
+}
+.welcome h2 {
+  font-weight: lighter;
+  padding: 10px 0px;
+}
+/* product section style*/
+.product h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.product .product-par1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.product .product-par2 {
+  font-size: 18px;
+  color: grey;
+}
+.star {
+  text-align: end;
+  color: gold;
+}
+.product .card {
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+}
+.product .card-body {
+  border: 1px dashed rgb(175 172 172);
+}
+.card-head {
+  font-weight: 400;
+  margin: 0px;
+}
+.ele-w {
+  color: gray;
+}
+.cart-btn {
+  height: 50px;
+  width: 50%;
+  outline: none;
+  border: none;
+  color: #fff;
+  background-color: var(--main-green);
+  border-radius: 50px;
+  margin: 0px auto;
+  display: block;
+  transition: all 0.4s;
+}
+.cart-btn:hover {
+  outline: none;
+  border: 1px solid var(--main-green);
+  color: var(--main-green);
+  background: transparent;
+  border-radius: 50px;
+}
+/* discount style*/
+.discount {
+  background: var(--main-green);
+  color: #fff;
+}
+.discount-btn {
+  height: 50px;
+  width: 75%;
+  outline: none;
+  border: none;
+  color: #000;
+  background-color: #fff;
+  border-radius: 50px;
+  margin: 0px auto;
+  display: block;
+  font-weight: lighter;
+  transition: all 0.4s;
+}
+.discount-btn:hover {
+  background-color: rgb(216 216 216);
+}
+.discount-head {
+  font-weight: 400;
+}
+.discount .form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--main-green);
+}
+@media (min-width: 576px) {
+  .modal {
+    --bs-modal-margin: 20.75rem;
+    --bs-modal-box-shadow: var(--bs-box-shadow);
+  }
+}
+@media (max-width: 576px) {
+  .modal {
+    top: 26em;
+  }
+}
+/*  srore style */
+.store h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.store .store-par1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.store .store-par2 {
+  font-size: 18px;
+  color: grey;
+}
+.store i {
+  font-size: 45px;
+}
+.store .card {
+  border-radius: 0px;
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.store .card:hover {
+  background: var(--main-green);
+  color: #fff;
+}
+.store .card:hover .ele-w {
+  color: #fff;
+}
+/*======================= seller style=========================*/
+.seller h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.seller i {
+  color: gold;
+}
+.seller .card {
+  border-radius: 0px;
+  border: none;
+}
+/* ====================== contact style ==================*/
+.contact {
+  background: url("../images/contact.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  /*height: 90vh;*/
+}
+.contact h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+.contact p {
+  color: #fff;
+}
+.circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 16px;
+}
+.contact input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 50px;
+}
+.contact textarea {
+  height: 100px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.contact .send-btn {
+  height: 50px;
+  width: 65%;
+  outline: none;
+  border: none;
+  color: #000;
+  background: #fff;
+  border-radius: 50px;
+  font-weight: ligher;
+  transition: all 0.3s;
+}
+.contact .send-btn:hover {
+  background: rgb(226 226 226);
+}
+/* ============= footer style ==============*/
+footer {
+  background: rgb(50 50 50);
+}
+footer .links i {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  padding-top: 9px;
+  margin-left: 10px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+footer .links i:hover {
+  background-color: var(--main-green);
+  color: #fff;
+  border: none;
+}
+footer p {
+  color: var(--main-green);
+}
+
+/* ====== Media Queries ====== */
+
+/* Laptop(1200px) */
+@media (max-width: 1200px) {
+  main h1 {
+    font-size: 3.5rem;
+  }
+  .main-btn1,
+  .main-btn2 {
+    width: 35%;
+  }
+  .cart-btn {
+    width: 60%;
+  }
+  .line {
+    width: 40%;
+  }
+}
+
+/* Tablet(992px) */
+@media (max-width: 992px) {
+  main h1 {
+    font-size: 3rem;
+  }
+  .main-par1,
+  .main-par2 {
+    font-size: 16px;
+  }
+  .main-btn1,
+  .main-btn2 {
+    width: 45%;
+  }
+  .about h1,
+  .store h1,
+  .product h1 {
+    font-size: 2rem;
+  }
+  .line {
+    width: 50%;
+  }
+}
+
+/* Tablet(768px) */
+@media (max-width: 768px) {
+  main {
+    height: auto;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  main h1 {
+    font-size: 2.5rem;
+  }
+  .main-btn1,
+  .main-btn2 {
+    width: 70%;
+    margin: 10px auto;
+    display: block;
+  }
+  .about,
+  .contact {
+    height: auto;
+    padding: 40px 20px;
+  }
+  .navbar-brand {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Mobile (576px) */
+@media (max-width: 576px) {
+  main h1 {
+    font-size: 2rem;
+  }
+  .main-par1,
+  .main-par2 {
+    font-size: 14px;
+  }
+  .main-btn1,
+  .main-btn2 {
+    width: 90%;
+  }
+  .product h1,
+  .about h1,
+  .store h1,
+  .seller h1,
+  .contact h1 {
+    font-size: 1.8rem;
+  }
+  .cart-btn,
+  .discount-btn,
+  .send-btn {
+    width: 90%;
+  }
+  footer p {
+    font-size: 14px;
+    text-align: center;
+  }
+}

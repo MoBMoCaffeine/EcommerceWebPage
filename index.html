@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- bootstrap icom -->
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <title>Ecommerce Food Website</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <nav class="navbar navbar-expand-lg pb-2">
+      <div class="container">
+        <!-- logo -->
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="Organic" class="img-fluid">
+        </a>
+
+        <!-- cart icon (mobile) -->
+        <span class="d-lg-none me-2 position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart">
+          <i class="bi bi-bag-plus fs-4"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+            0
+          </span>
+        </span>
+
+        <!-- toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span><i class="bi bi-list"></i></span>
+        </button>
+
+        <!-- offcanvas menu -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- search form -->
+            <form class="d-flex mt-3 mt-lg-0" role="search">
+              <input class="px-2 search" type="search" placeholder="Search" aria-label="Search" />
+              <button class="search-btn me-2 px-3" type="submit">Search</button>
+              <!-- cart icon desktop -->
+              <span class="d-none d-lg-inline position-relative" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasCart">
+                <i class="bi bi-bag-plus"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">
+                  0
+                </span>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- offcanvas cart -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">🛒 Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul id="cart-items" class="list-group mb-3">
+        <li class="list-group-item">No items in cart</li>
+      </ul>
+      <div class="d-flex justify-content-between fw-bold">
+        <span>Total:</span>
+        <span id="cart-total">$0</span>
+      </div>
+      <button class="checkOut btn w-100 mt-3" id="checkOut">Checkout</button>
+    </div>
+  </div>
+  <!-- start main -->
+  <main class="py-5" id="home">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-lg-6 py-5 _word-breacker">
+          <p class="m-0 main-par1">Organic Products</p>
+          <h1>Fresh Organic</h1>
+          <div class="line my-4"></div>
+          <p class="main-par2">
+            loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem
+          </p>
+          <button class="main-btn1 mt-4" id="moreInfo">Read More</button>
+          <button class="main-btn2" id="shop">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- end main -->
+  <!-- start about section -->
+  <section class="about py-4" id="about">
+    <div class="container py-4">
+      <div class="row py-4">
+        <div class="col-lg-6 py-4  _word-breacker col-md-12 col-sm-12 col-12">
+          <p class="about-par1 m-0">Organic Products</p>
+          <h1>About Our Organic</h1>
+          <div class="line my-4"></div>
+          <p class="about-par2">
+            loremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremloremlorem
+          </p>
+          <button class="main-btn1 mt-4" id="aboutOrganic">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end about section -->
+  <!-- start welcome section -->
+  <section class="welcome text-center pb-5" id="services">
+    <div class="container py-5">
+      <div class="row py-5 text-white">
+        <div class="col-lg-6 m-auto">
+          <p class="m-0">Green Agriculture</p>
+          <h1>Welcome To Organic</h1>
+          <div class="line my-3"></div>
+          <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-shop-window"></i></span>
+              <h2>Always Fresh</h2>
+              <p>lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-flower2"></i></span>
+              <h2>Healthy Food</h2>
+              <p>lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-gift"></i></span>
+              <h2>100% Organic</h2>
+              <p>lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end welcome section -->
+  <!-- start product section -->
+  <section class="product bg-light" id="product">
+    <div class="container">
+      <div class="row py-5 text-center">
+        <div class="col-lg-6 m-auto">
+          <p class="product-par1 m-0">Green Agriculture</p>
+          <h1>Our Best Products</h1>
+          <div class="line my-3"></div>
+          <p class="product-par2">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+              </div>
+              <img src="images/orange.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Orange</h4>
+              <p class="ele-w">2 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;43.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Pear</h4>
+              <p class="ele-w">2 &#10005; 400g / 16oz</p>
+              <h4 class="card-head">&pound;15.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/papaya.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Papaya</h4>
+              <p class="ele-w">1 &#10005; 600g / 16oz</p>
+              <h4 class="card-head">&pound;30.99</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+              </div>
+              <img src="images/apple.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Apple</h4>
+              <p class="ele-w">3 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;6.99</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Orange</h4>
+              <p class="ele-w">2 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;43.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/mango.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Mango</h4>
+              <p class="ele-w">1 &#10005; 450g / 16oz</p>
+              <h4 class="card-head">&pound;42.99</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pomegranate.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Pomegranate</h4>
+              <p class="ele-w">3 &#10005; 350g / 16oz</p>
+              <h4 class="card-head">&pound;29.99</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Orange</h4>
+              <p class="ele-w">2 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;43.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Orange</h4>
+              <p class="ele-w">2 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;43.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-2">
+          <div class="card p-2">
+            <div class="card-body">
+              <div class="star">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+              </div>
+              <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+              <h4 class="card-head">Orange</h4>
+              <p class="ele-w">2 &#10005; 454g / 16oz</p>
+              <h4 class="card-head">&pound;43.00</h4>
+              <button class="cart-btn my-4">ADD TO CART</button>
+            </div>
+          </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                  </div>
+                  <img src="images/orange.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/papaya.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                  </div>
+                  <img src="images/apple.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/mango.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pomegranate.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-2">
+              <div class="card p-2">
+                <div class="card-body">
+                  <div class="star">
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-fill"></i></span>
+                    <span><i class="bi bi-star-half"></i></span>
+                    <span><i class="bi bi-star"></i></span>
+                  </div>
+                  <img src="images/pear.jpg" alt="" class="img-fluid pb-3">
+                  <h4 class="card-head">Orange</h4>
+                  <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                  <h4 class="card-head">&pound;43.00</h4>
+                  <button class="cart-btn my-4">ADD TO CART</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center py-5">
+        <div class="col-lg-6 m-auto">
+          <button class="main-btn1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end product section -->
+  <!-- start discount section -->
+  <section class="discount py-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="colo-lg-10 m-auto text-center">
+          <h1 class="card-head"><span style="font-weight: 300;"><i class="bi bi-cash-coin"></i>Discount Coupon for -20%
+              :</span>PWEB01424</h1>
+        </div>
+        <div class="col-lg-2 m-auto">
+          <button class="discount-btn mt-4" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">More
+            Offers</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Do you have a Coupon ?
+                  </h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <input type="text" class="form-control" id="inputCoupon" placeholder="Enter your Coupon.........">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancle</button>
+                  <button type="button" class="btn" style="background-color: rgb(20, 219, 20);"
+                    id="applyCoupon">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end discount section -->
+  <!-- start store section -->
+  <section class="store py-5 bg-light text-center">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6 m-auto">
+          <p class="store-par1 m-0">Green Agriculture</p>
+          <h1>Our Best Products</h1>
+          <div class="line my-3"></div>
+          <p class="store-par2">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-truck"></i></span>
+              <h5 class="card-head py-3">Free Shiping</h5>
+              <p class="ele-w">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-patch-check"></i></span>
+              <h5 class="card-head py-3">Organic Certified</h5>
+              <p class="ele-w">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-wallet"></i></span>
+              <h5 class="card-head py-3">Secure Payment</h5>
+              <p class="ele-w">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-2">
+          <div class="card py-3">
+            <div class="card-body">
+              <span><i class="bi bi-person-x"></i></span>
+              <h5 class="card-head py-3">Friendly Support</h5>
+              <p class="ele-w">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end store section -->
+  <!-- start seller section -->
+  <section class="seller bg-light py-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="py-5">New Arrivals</h1>
+        </div>
+      </div>
+      <div class="row g-2 py-2">
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2 py-2">
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2 py-2">
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <img src="images/orange.jpg" alt="" class="img-fluid">
+              </div>
+              <div class="col-lg-6 p-5">
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-fill"></i></span>
+                <span><i class="bi bi-star-half"></i></span>
+                <span><i class="bi bi-star"></i></span>
+                <h5 class="card-head">Fresh Pinapple</h5>
+                <p class="ele-w">2 &#10005; 454g / 16oz</p>
+                <h4 class="card-head">&pound;43.00</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end seller section -->
+  <!-- start contact section -->
+  <section class="contact py-5" id="contact">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-lg-7">
+          <p class="m-0">Green Agriculture</p>
+          <h1>Contact Us</h1>
+          <div class="line my-3"></div>
+          <p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+            lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+          <div class="row py-3">
+            <div class="col-lg-6">
+              <div class="row pt-2">
+                <div class="col-lg-3 col-sm-3 col-2">
+                  <div class="circle">
+                    <span><i class="bi bi-house-fill"></i></span>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-8 pt-2">
+                  <p>send us a message=></p>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-lg-3 col-sm-3 col-2">
+                  <div class="circle">
+                    <span><i class="bi bi-linkedin"></i></span>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-8 pt-2">
+                  <p><a href="http://linkedin.com/in/mohamed-bakr-6641b1376" style="color: #fff;">Mohamed Bakr</a></p>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-lg-3 col-sm-3 col-2">
+                  <div class="circle">
+                    <span><i class="bi bi-telephone-fill"></i></span>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-8 pt-2">
+                  <p>+20 10 098 908 72</p>
+                </div>
+              </div>
+              <div class="row pt-2">
+                <div class="col-lg-3 col-sm-3 col-2">
+                  <div class="circle">
+                    <span><i class="bi bi-envelope"></i></span>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-sm-8 col-8 pt-2">
+                  <p><a href="bakrm1921@gmail.com" style="color: #fff;">bakrm1921@gmail.com</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <form action="" method="get" id="contactForm">
+                <input type="text" placeholder="Name....." id="userName" required>
+                <input type="email" placeholder="Email......" id="userEmail" required>
+                <input type="number" placeholder="Phone....." id="userPhone" required>
+                <textarea name="message" placeholder="Message....." id="userMessage"></textarea>
+                <button class="send-btn mt-3" id="sendBtn">Send Now</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+  <!-- start footer section -->
+  <footer class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 pt-3">
+          <p>Copyright 2022 &copy; Organic | Orgainc Store Template by ProWeb <code>MO B MO</code></p>
+        </div>
+        <div class="col-lg-3">
+          <div class="links d-flex justify-content-center">
+            <span><i class="bi bi-youtube"></i></span>
+            <span><i class="bi bi-facebook"></i></span>
+            <span><i class="bi bi-instagram"></i></span>
+            <span><i class="bi bi-twitter-x"></i></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end footer section -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="scripts/scirpt.js"></script>
+</body>
+
+</html>
