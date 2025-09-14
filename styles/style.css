@@ -20,7 +20,7 @@ p {
 header {
   position: sticky;
   top: 0;
-  z-index: 999999;
+  z-index: 999;
   background-color: #fff;
 }
 .img-fluid {
@@ -108,6 +108,9 @@ header {
   .navbar .bi-bag-plus {
     margin-right: auto; /* تخليها تلزق شمال شوية */
   }
+}
+#offcanvasCart{
+  z-index: 99999;
 }
 #offcanvasCart .checkOut{
   background-color: var(--main-green);
